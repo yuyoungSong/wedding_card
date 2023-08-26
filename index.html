@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- 반응형 적용을 위한 meta 태그 / 해당 태그 없으면 미디어 쿼리 적용 안됨 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -18,7 +18,23 @@
      <!--모바일 width: 320px 에 맞춰서 하고, max-width는 420px -->
 
      <script>
-      
+        $(function(){
+            $('#photo ul li').click(function(){
+                $('#cover').css('display','block');
+                
+                 $('#cover img').attr('src','./images/img/'+$(this).attr('class'));
+                //  console.log($('#cover img').css('height'));
+                 $('#cover figure').css('height',$('#cover img').css('height'));
+                
+                
+            })
+
+            // $('#cover').click(function(){
+            //     $('#cover').css('display','none');
+            // })
+          
+        })
+     </script>
      </script>
      <style>
         article{
@@ -27,6 +43,27 @@
             font-weight: 400;
             font-family: 'Nanum Myeongjo', serif;
             background-color: #EFE6DF;
+        }
+
+        #cover{
+            position: fixed;
+            width: 100%;
+            max-width: 420px;
+            height: 100vh;
+            background-color: rgba(0, 0, 0,0.5);
+            z-index: 1000;
+            display: none;
+        }
+
+        #cover figure{
+            position: absolute;
+            width: 70%;
+            height: 0;
+            top:0;
+            bottom: 0;
+            right:0;
+            left:0;
+            margin: auto;
         }
 
         #photo{
@@ -64,6 +101,8 @@
 
 
 
+
+
         
 
 
@@ -78,7 +117,7 @@
         }
 
         #conect .count_num div{
-            background-color: rgb(255, 255, 255);
+            /* background-color: rgb(255, 255, 255); */
             margin: 0 auto;
             width: 200px;
             height: 70px;
@@ -94,11 +133,12 @@
             line-height: 35px;
            color: #ebebeb;
            font-weight: bold;
-            background-color: rgb(153, 139, 120) !important;
+            background-color: rgb(153, 139, 120);
         }
 
         #conect .count_num div p{
             line-height: 35px;
+            background-color: rgb(255, 255, 255);
         }
 
         
@@ -113,6 +153,11 @@
 </head>
 <body>
     <article>
+        <div id="cover">
+            <figure>
+                <img src="" alt="">
+            </figure>
+        </div>
         <header>
             <div>
                 <p>SON MINSU</p>
@@ -227,15 +272,15 @@
         <section id="photo">
             <h2>우리, 결혼해요!</h2>
             <ul>
-                <li style="background-image: url(/wedding_card/images/img/01.jpeg);"></li>
-                <li style="background-image: url(/wedding_card/images/img/02.jpeg);"></li>
-                <li style="background-image: url(/wedding_card/images/img/03.jpeg);"></li>
-                <li style="background-image: url(/wedding_card/images/img/04.jpeg);"></li>
-                <li style="background-image: url(/wedding_card/images/img/05.jpeg);"></li>
-                <li style="background-image: url(/wedding_card/images/img/06.jpeg);"></li>
-                <li style="background-image: url(/wedding_card/images/img/07.jpeg);"></li>
-                <li style="background-image: url(/wedding_card/images/img/08.jpeg);"></li>
-                <li style="background-image: url(/wedding_card/images/img/09.png);"></li>
+                <li class="01.jpeg" style="background-image: url(/wedding_card/images/img/01.jpeg);"></li>
+                <li class="02.jpeg" style="background-image: url(/wedding_card/images/img/02.jpeg);"></li>
+                <li class="03.jpeg" style="background-image: url(/wedding_card/images/img/03.jpeg);"></li>
+                <li class="04.jpeg" style="background-image: url(/wedding_card/images/img/04.jpeg);"></li>
+                <li class="05.jpeg" style="background-image: url(/wedding_card/images/img/05.jpeg);"></li>
+                <li class="06.jpeg" style="background-image: url(/wedding_card/images/img/06.jpeg);"></li>
+                <li class="07.jpeg" style="background-image: url(/wedding_card/images/img/07.jpeg);"></li>
+                <li class="08.jpeg" style="background-image: url(/wedding_card/images/img/08.jpeg);"></li>
+                <li class="09.png" style="background-image: url(/wedding_card/images/img/09.png);"></li>
              
             </ul>
             
