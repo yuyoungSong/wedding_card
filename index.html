@@ -32,6 +32,36 @@
             $('#cover span').click(function(){
                 $('#cover').css('display','none');
             })
+
+            $('#acount .man h3 span').click(function(){
+                if($('#acount .man p').css('display') === 'block'){
+                    console.log('01');
+                    $('#acount .man p').slideUp();
+                    $('#acount .man h3 span').css('transform','scaleY(1) rotate(-135deg)');
+                    // $('#acount .acount_num h3 span').css('top','16');
+
+                }
+                else{
+                    console.log('02');
+                    $('#acount .man p').slideDown();
+                    $('#acount .man h3 span').css('transform','scaleY(1) rotate(45deg)');
+                }
+            })
+
+            $('#acount .woman h3 span').click(function(){
+                if($('#acount .woman p').css('display') === 'block'){
+                    console.log('01');
+                    $('#acount .woman p').slideUp();
+                    $('#acount .woman h3 span').css('transform','scaleY(1) rotate(-135deg)');
+                    // $('#acount .acount_num h3 span').css('top','16');
+
+                }
+                else{
+                    console.log('02');
+                    $('#acount .woman p').slideDown();
+                    $('#acount .woman h3 span').css('transform','scaleY(1) rotate(45deg)');
+                }
+            })
           
         })
      </script>
@@ -83,6 +113,7 @@
         #cover figure img{
             border: 5px solid #fff;
             box-sizing: border-box;
+            background-color: #fff;
         }
 
         #photo{
@@ -103,7 +134,7 @@
             margin: 0 10px 10px 0;
             background-color: rgb(255, 255, 255);
             float: left;
-
+            
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -125,41 +156,77 @@
         
 
 
-        #conect{
+        #acount{
+            padding: 45px 10px;
+            box-sizing: border-box;
             text-align: center;
-            margin-bottom: 100px;
+            margin-bottom: 30px;
         }
 
-        #conect > p{
+        #acount h2{
+            text-align: center;
+            color: #443D3D;
+            margin-bottom: 35px;
+        }
+
+        #acount > p{
             font-size: 13px;
             margin: 20px auto;
-            line-height: 30px;
+            line-height: 20px;
         }
 
-        #conect .count_num div{
-            /* background-color: rgb(255, 255, 255); */
+        #acount .acount_num{
+            background-color: rgb(255, 255, 255);
             margin: 0 auto;
-            width: 200px;
-            height: 70px;
+            width: 350px;
+            /* height: 70px; */
             margin-bottom: 10px;
       
 
         }
 
-        #conect .count_num div span{
+        #acount .acount_num h3{
             display: inline-block;
+            font-size: 13px;
             height: 35px;
             width: 100%;
             line-height: 35px;
            color: rgb(88, 78, 64);
            font-weight: bold;
             background-color: #cec7ba;
+            position: relative;
         }
 
-        #conect .count_num div p{
-            line-height: 35px;
-            background-color: rgb(255, 255, 255);
-            font-size: 13px;
+        #acount .acount_num h3 span{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid rgb(91, 67, 47);
+            border-top: none;
+            border-left: none;
+            /* float: right; */
+            position: absolute;
+            right:15px;
+            top: 10px;
+            transform: scaleY(1) rotate(45deg);
+            transform-origin: center 5px;
+            transition: 0.3s;
+
+            
+        }
+
+        #acount .acount_num p{
+            /* line-height: 35px; */
+            padding: 25px;
+            box-sizing: border-box;
+            font-size: 11px;
+        }
+
+        #bottom{
+            text-align: center;
+           padding-bottom: 15px;
+           font-size: 8px;
+           color: rgb(164, 162, 160);
         }
 
         
@@ -314,27 +381,29 @@
             
         </section>
 
-        <section id="conect">
-            <h3>마음 전하실 곳</h3>
+        <section id="acount">
+            <h2>마음 전하실 곳</h2>
             <p>
                 참석이 어려우신 분들을 위해<br>
                 계좌번호를 기재하였습니다.<br>
                 양해 부탁드립니다.
             </p>
 
-            <div class="count_num">
-                <div>
-                    <span>신랑측</span>
+            <div class="acount_num man">
+                    <h3>신랑측
+                        <span></span>
+                    </h3>
                     <p>손민수 기업 350881054</p>
-                </div>
-                <div>
-                    <span>신부측</span>
-                    <p>임라라 우리 350881054</p>
-                </div>
+            </div>
+            <div class="acount_num woman">
+                <h3>신부측
+                    <span></span>
+                </h3>
+                <p>임라라 우리 350881054</p>
             </div>
         </section>
 
-        <p>copyright 2023 from Shin seoyeon. All rights reserved.</p>
+        <section id="bottom">copyright 2023 from Shin seoyeon. All rights reserved.</section>
 
 
     </article>
