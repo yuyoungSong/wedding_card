@@ -110,3 +110,83 @@
             line-height: 35px;
             text-align: center;
        }
+
+
+
+
+       #way_to_come{
+        padding: 35px 15px;
+        
+    }
+
+    #way_to_come .way_to_come_wrap{
+        
+        /* color: #b5b4b4; */
+        box-sizing: border-box;
+    }
+
+    #way_to_come .way_to_come_wrap h2{
+        text-align: center;
+        color: #443D3D;
+        margin-bottom: 35px;
+    }
+
+    #way_to_come .way_to_come_wrap .map_wrap{
+        overflow: hidden;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+    .way_to_come_wrap .map_btn{
+        background-color: rgb(211, 198, 181);
+        /* margin-top: 10px; */
+        height: 30px;
+        width: 300px;
+        line-height: 30px;
+        border-radius: 10px;
+        margin: auto;
+        font-size: 15px;
+        
+    }
+    .way_to_come_wrap .map_btn a{
+        text-align: center;
+        font-weight: bold;
+        font-size: 10px;
+        color: rgb(82, 71, 61);
+    }
+
+    .come_path{
+        margin: 20px 0;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(68,62,62,0.2);
+    }
+    .come_path h3{
+        color:rgb(82, 71, 61);
+        font-weight: bold;
+    }
+    .come_path > p{
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .come_path ul{
+        text-align: left !important;
+        margin: 20px 0 0 20px;
+        font-size: 15px;
+    }
+    .come_path ul li{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+
+    .come_path ul li p{
+        width: 100px;
+        font-weight: bold;
+        color: #786e60;
+    }
+
+    .come_path ul li span{
+        line-height: 20px;
+    }
