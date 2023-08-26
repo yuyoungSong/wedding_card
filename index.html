@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 반응형 적용을 위한 meta 태그 / 해당 태그 없으면 미디어 쿼리 적용 안됨 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--  style css 파일의 import  -->
+    <link href="css/import.css" rel="stylesheet" type="text/css">
+
+    <!--
+        * 사이즈별 View 확인 방법 *
+            크롬 브라우저 => F12 (개발자 도구) or 마우스 우 클릭 ( 검사 )
+            요소 탭 옆의 모바일 기기 아이콘 클릭
+     -->
+     <!--모바일 width: 320px 에 맞춰서 하고, max-width는 420px -->
+
+     <script>
+      
+     </script>
+     <style>
+        article{
+            max-width: 420px;
+            margin: 0 auto;
+            font-weight: 400;
+            font-family: 'Nanum Myeongjo', serif;
+            background-color: #EFE6DF;
+        }
+
+        #way_to_come{
+            padding: 35px 15px;
+            
+        }
+
+        #way_to_come .way_to_come_wrap{
+            
+            /* color: #b5b4b4; */
+            box-sizing: border-box;
+        }
+
+        #way_to_come .way_to_come_wrap h2{
+            text-align: center;
+            color: #443D3D;
+            margin-bottom: 35px;
+        }
+
+        #way_to_come .way_to_come_wrap .map_wrap{
+            overflow: hidden;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+
+        .way_to_come_wrap .map_btn{
+            background-color: rgb(211, 198, 181);
+            /* margin-top: 10px; */
+            height: 30px;
+            width: 300px;
+            line-height: 30px;
+            border-radius: 10px;
+            margin: auto;
+            font-size: 15px;
+            
+        }
+        .way_to_come_wrap .map_btn a{
+            text-align: center;
+            font-weight: bold;
+            font-size: 10px;
+            color: rgb(82, 71, 61);
+        }
+
+        .come_path{
+            margin: 20px 0;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(68,62,62,0.2);
+        }
+        .come_path h3{
+            color:rgb(82, 71, 61);
+            font-weight: bold;
+        }
+        .come_path > p{
+            margin-top: 5px;
+            font-size: 12px;
+        }
+
+        .come_path ul{
+            text-align: left !important;
+            margin: 20px 0 0 20px;
+            font-size: 15px;
+        }
+        .come_path ul li{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+
+        .come_path ul li p{
+            width: 100px;
+            font-weight: bold;
+            color: #786e60;
+        }
+
+        .come_path ul li span{
+            line-height: 20px;
+        }
+
+
+        
+
+
+
+        
+
+
+
+     </style>
+</head>
+<body>
+    <article>
+        <header>
+            <div>
+                <p>SON MINSU</p>
+                <span><img src="./images/and_logo.png" alt="and_logo"></span>
+                <p>SON LALAA</p>
+            </div>
+        </header>
+
+        <section id="main">
+            <figure>
+                <img src="./images/main_img.jpg" alt="">
+                <figcaption>
+                    THE RAUM<br>
+                    May 21 2023 PM 02:00
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <section id="intro_text">
+      
+                <p class="top_text">2년은 친한 친구로 10년은 사랑하는 연인으로 <br>
+                    앞으로 평생은 부부로 함께 하고자 합니다. <br>
+                    엔조이커플 드디어 결혼합니다!
+                </p>
+                <p class="bottom_text">
+                        눈치 보지 말고 비교하지 말고 <br>
+                        즐기면서 영원히 사랑하겠습니다. <br>
+                        축복의 자리에 오셔서 함께 즐겨주시기 바랍니다.
+                </p>
+                <img src="./images/img2.jpg" alt="">
+                
+                <div>
+                    <p>
+                        <span>정옥순의 차남</span> 신랑 손민수
+                    </p>
+                    <p>
+                        <span>강순자의 장녀</span> 신부 임라라
+                    </p>
+                </div>
+
+                <span>
+                    <a href="tel:010-3114-5594">
+                        혼주에게 연락하기
+                    </a>
+                </span>
+
+
+            
+        </section>
+
+        <section id="way_to_come">
+            <div class="way_to_come_wrap">
+                <h2>오시는 길</h2>
+
+                <div class="map_wrap">
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1693027725037" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    <!--
+                        2. 설치 스크립트
+                        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                    -->
+                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        let mapWidth = $('article').width() - 20;
+                        $(window).resize(() => {
+                            mapWidth = $('article').width() - 20;
+                        })
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1693027725037",
+                            "key" : "2fymc",
+                            "mapWidth" : mapWidth,
+                            "mapHeight" : "300"
+                        }).render();
+                    </script>
+                </div>
+                <div class="map_btn">
+                    <a href="http://kko.to/JthFe8klmu">지도 바로가기</a>
+                </div>
+
+                <div class="come_path">
+                    <h3>서울특별시 강남구 언주로 564</h3>
+                    <p>The Raum 2F Grass Garden</p>
+                    <ul>
+                        <li>
+                            <p>지하철</p>
+                            <span>9호선 언주역 도보 10분</span>    
+                        </li>
+                        <li>
+                            <p>버스</p>
+                            <span>
+                                402번, 405번, 411번, 501번<br>
+                                언주로 사거리 정류장 <br>
+                                하차 후 도보 3분
+                            </span>    
+                        </li>
+                        <li>
+                            <p>자차</p>
+                            <span>
+                                건물 내 1,400대 주차 가능 <br>
+                                (2시간 무료)
+                            </span>    
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="photo">
+            <h3>우리, 결혼해요!</h3>
+            
+        </section>
+
+        <section id="conect">
+            <h3>마음 전하실 곳</h3>
+            <p></p>
+        </section>
+
+
+    </article>
+</body>
+</html>

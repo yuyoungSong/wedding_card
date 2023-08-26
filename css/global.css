@@ -1,0 +1,112 @@
+/* PC : 윈도우 사이즈 1024px 이상인 경우 적용 */
+@media screen and (min-width:1024px) {}
+
+/* 태블릿 : 윈도우 사이즈 768px ~ 1023px 사이인 경우 적용 */
+@media screen and (min-width:768px) and (max-width: 1023px){}
+
+/* 모바일 : 윈도우 사이즈 0px ~ 767px 사이인 경우 적용 */
+@media screen and (max-width:767px){}
+
+        article header{
+            width: 100%;
+            height: 100px;
+            background-color: #EFE6DF;
+        
+        }
+        article header div{
+            display: flex;
+            flex-direction: row;
+            /* background-color: aqua; */
+            width: 260px;
+            height: 100px;
+            margin: 0 auto;
+            padding-top: 40px;
+            justify-content: space-between;
+            box-sizing:border-box;
+
+        }
+        /* article header div img{
+            width: 50px;
+        } */
+        article header div span{
+            width: 50px;
+        }
+        article header div p{
+            line-height: 50px;
+            color: #7A645A;
+            font-family:'Lisu Bosa', serif;
+            font-weight: 900;
+        }
+
+
+        #main{
+            padding: 15px 15px 25px;
+            background-color: white;
+            box-sizing: border-box;
+           
+        }   
+        #main img{
+            margin-bottom: 25px;
+        }
+        #main figcaption{
+            font-family: 'Lisu Bosa', serif;
+            font-weight: 900;
+            text-align: center;
+            color: #7A645A;
+            line-height: 25px;
+        }
+
+
+
+        #intro_text{
+            text-align: center;
+            width: 100%;
+            padding: 70px 15px 35px;
+            background-color: #EFE6DF;
+            box-sizing: border-box;
+            background-image: url(/images/wedding.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 0px -35px;
+        }
+        #intro_text p{
+            font-size: 13px;
+            line-height: 20px;
+            text-align: center;
+            font-weight: 400;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+        #intro_text .top_text{
+            margin-bottom: 35px;
+        }
+        #intro_text img{
+            margin: 35px 0;
+        }
+        #intro_text div{
+            margin-bottom: 35px;
+        }
+        #intro_text div p{
+            font-weight: 400;
+            font-family: 'Nanum Myeongjo', serif;
+            color: #443D3D;
+            font-size: 15px;
+            text-align: center;
+        }
+        #intro_text div p span{
+            font-size: 10px;
+            color: #968C8C;
+        }
+       #intro_text > span{
+            border: 1px solid #786452;
+            /* padding: 7px 25px; */
+            border-radius: 20px;
+            font-size: 13px;
+            color: #786452;
+            font-weight: 400;
+            font-family: 'Nanum Myeongjo', serif;
+            display: inline-block;
+            width: 150px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+       }
